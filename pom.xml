@@ -9,6 +9,11 @@
     <groupId>com.wmh</groupId>
     <!-- 项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 -->
     <artifactId>cli</artifactId>
+    <packaging>pom</packaging>
     <!-- 版本号 -->
     <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>cli-user</module>
+        <module>cli-common</module>
+    </modules>
 </project>
