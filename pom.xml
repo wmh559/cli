@@ -14,6 +14,7 @@
     <modules>
         <module>cli-user</module>
         <module>cli-common</module>
+        <module>cli-common/cli-common-web</module>
     </modules>
 <!--    版本控制-->
     <properties>
@@ -33,6 +34,14 @@
         <version>2.7.3</version>
     </parent>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wmh</groupId>
+            <artifactId>cli-common-web</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 <!--    配置maven打包插件-->
     <build>
