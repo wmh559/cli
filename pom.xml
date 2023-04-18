@@ -15,6 +15,7 @@
         <module>cli-user</module>
         <module>cli-common</module>
         <module>cli-common/cli-common-web</module>
+        <module>cli-common/cli-common-mybatisplus</module>
     </modules>
 <!--    版本控制-->
     <properties>
