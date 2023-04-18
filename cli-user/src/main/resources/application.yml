@@ -5,7 +5,7 @@ spring:
     username: root
     password: daai_intelligent
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3609/comanalysis?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true&autoReconnect=true
+    url: jdbc:mysql://127.0.0.1:3609/cli?useUnicode=true&characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true&autoReconnect=true
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 20
