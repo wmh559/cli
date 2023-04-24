@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Integer insertUser(UserDto userDto) {
         UserPo userPo = new UserPo();
-        BeanUtils.copyProperties(userDto,userDto);
+        BeanUtils.copyProperties(userDto,userPo);
         int count = userMapper.insert(userPo);
         return count;
     }
