@@ -2,6 +2,7 @@ package com.wmh.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.util.Date;
@@ -25,6 +26,7 @@ public class BaseEntity {
     private Date updateTime;
 
     @TableField(fill = FieldFill.INSERT)
+    @TableLogic
     private Integer deleteFlag;
 
     @TableField(fill = FieldFill.INSERT)

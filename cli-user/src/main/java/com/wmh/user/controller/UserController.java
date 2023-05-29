@@ -6,10 +6,7 @@ import com.wmh.user.entity.req.UserReq;
 import com.wmh.user.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author wmh
@@ -28,5 +25,11 @@ public class UserController {
         Integer integer = userService.insertUser(userDto);
         int i = 1/0;
         return Result.ok(integer);
+    }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public Result deleteUser(@PathVariable int id) {
+        userService.deleteUser(id);
+        return Result.ok();
     }
 }

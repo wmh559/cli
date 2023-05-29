@@ -13,4 +13,10 @@ public interface UserService {
      * @return
      */
     Integer insertUser(UserDto userDto);
+
+    /**
+     * 删除用户
+     * @param id
+     */
+    void deleteUser(int id);
 }
