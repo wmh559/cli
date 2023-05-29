@@ -1,5 +1,6 @@
 package com.wmh.user.controller;
 
+import com.wmh.bean.Result;
 import com.wmh.user.entity.dto.UserDto;
 import com.wmh.user.entity.req.UserReq;
 import com.wmh.user.service.UserService;
@@ -21,9 +22,14 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/addUser")
-    public Integer addUser(@RequestBody UserReq userReq) {
-        UserDto userDto = new UserDto();
-        BeanUtils.copyProperties(userReq,userDto);
-        return userService.insertUser(userDto);
+    public Result addUser(@RequestBody UserReq userReq) {
+        try {
+            UserDto userDto = new UserDto();
+            BeanUtils.copyProperties(userReq,userDto);
+            Integer integer = userService.insertUser(userDto);
+            return Result.ok(integer);
+        } catch (Exception e) {
+            return Result.fail();
+        }
     }
 }
