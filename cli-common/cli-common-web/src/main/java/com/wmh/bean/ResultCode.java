@@ -11,4 +11,6 @@ public class ResultCode {
 
     public static final Integer PARAMNOTEXIST = 499;
 
+    public static final Integer ArithmeticExceptionCode = 49901;
+
 }

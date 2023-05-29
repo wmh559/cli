@@ -23,13 +23,10 @@ public class UserController {
 
     @PostMapping("/addUser")
     public Result addUser(@RequestBody UserReq userReq) {
-        try {
-            UserDto userDto = new UserDto();
-            BeanUtils.copyProperties(userReq,userDto);
-            Integer integer = userService.insertUser(userDto);
-            return Result.ok(integer);
-        } catch (Exception e) {
-            return Result.fail();
-        }
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(userReq,userDto);
+        Integer integer = userService.insertUser(userDto);
+        int i = 1/0;
+        return Result.ok(integer);
     }
 }

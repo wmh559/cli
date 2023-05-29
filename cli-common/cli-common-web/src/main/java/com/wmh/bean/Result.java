@@ -57,7 +57,7 @@ public class Result<T> implements Serializable {
 
     public static Result fail() {
         Result result = new Result();
-        result.setSuccess(true);
+        result.setSuccess(false);
         result.setCode(ResultCode.ERROR);
         result.setMessage(ResultMessage.ERROR);
         return result;
@@ -65,7 +65,7 @@ public class Result<T> implements Serializable {
 
     public static Result fail(Integer resultCode, String resultMessage) {
         Result result = new Result();
-        result.setSuccess(true);
+        result.setSuccess(false);
         result.setCode(resultCode);
         result.setMessage(resultMessage);
         return result;
@@ -73,7 +73,7 @@ public class Result<T> implements Serializable {
 
     public static <T> Result fail(Integer resultCode, String resultMessage, T data) {
         Result result = new Result();
-        result.setSuccess(true);
+        result.setSuccess(false);
         result.setCode(resultCode);
         result.setMessage(resultMessage);
         result.setData(data);
@@ -82,7 +82,7 @@ public class Result<T> implements Serializable {
 
     public static <T> Result fail(T data) {
         Result result = new Result();
-        result.setSuccess(true);
+        result.setSuccess(false);
         result.setCode(ResultCode.ERROR);
         result.setMessage(ResultMessage.ERROR);
         result.setData(data);

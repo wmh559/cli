@@ -9,4 +9,6 @@ public class ResultMessage {
 
     public static final String ERROR = "失败";
 
+    public static final String ARITHMETICERROR = "算术异常";
+
 }
