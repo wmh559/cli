@@ -24,9 +24,26 @@ spring:
           slow-sql-millis: 2000
         wall:
           enabled: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: -1
 mybatis-plus:
   global-config:
     db-config:
       logic-delete-field: delete_flag
       logic-delete-value: 1
       logic-not-delete-value: 0
+swagger:
+  base-package: com.jingdianjichi
+  title: cli
+  contact-name: www
+  contact-url: 地址
+  email: jichi@163.com
+  version: 1.0
+  description: 从0到1 开箱即用脚手架
